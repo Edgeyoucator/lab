@@ -1,5 +1,6 @@
 let userName = "";
-const groupName = "group-alpha";
+const urlParams = new URLSearchParams(window.location.search);
+const groupName = urlParams.get("group") || "default-group";
 const db = firebase.database();
 const localAnswers = {};  // stores user's current edits
 
