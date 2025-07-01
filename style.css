@@ -1,0 +1,162 @@
+@font-face {
+  font-family: 'LeBeauneNew';
+  src: url("https://db.onlinewebfonts.com/t/9f4965a37ac189de7844a4c13c7108f5.woff2") format("woff2"),
+       url("https://db.onlinewebfonts.com/t/9f4965a37ac189de7844a4c13c7108f5.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  margin: 0;
+  padding: 2rem;
+  font-family: 'Times New Roman', serif;
+  color: white;
+  text-align: center;
+  position: relative;
+  min-height: 100vh;
+  background-image: url('images/background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(22, 34, 55, 0.85);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1 {
+  font-family: 'LeBeauneNew', sans-serif;
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+.circle-layout {
+  position: relative;
+  width: 700px;
+  height: 700px;
+  margin: 0 auto;
+}
+
+.question[data-key="0"] { top: 5%; left: 37%; }
+.question[data-key="1"] { top: 20%; left: 77%; }
+.question[data-key="2"] { top: 55%; left: 77%; }
+.question[data-key="3"] { top: 60%; left: 37%; }
+.question[data-key="4"] { top: 55%; left: -3%; }
+.question[data-key="5"] { top: 20%; left: -3%; }
+
+.question {
+  position: absolute;
+  width: 200px;
+  padding: 1rem;
+  background-color: rgba(31, 46, 71, 0.65);
+   border: 1px dashed #86dabd;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.question img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.question input {
+  width: 80%;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+.centered-password {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.centered-password input {
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  width: 200px;
+  background-color: white;
+  color: #162237;
+}
+
+.typing-indicator {
+  font-style: italic;
+  margin-top: 0.25rem;
+  height: 1rem;
+}
+
+.question[style*="opacity: 0.5"] {
+  pointer-events: none;
+}
+
+.activate-btn[disabled] {
+  background-color: #666;
+  cursor: not-allowed;
+}
+
+.centered-password {
+  position: absolute;
+  top: 47%;
+  left: 53.9%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: rgba(255, 120, 10, 0.5);
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+}
+
+.centered-password input {
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  width: 200px;
+  background-color: white;
+  color: #162237;
+}
+
+.password-correct {
+  box-shadow: 0 0 12px 4px #86dabd;
+  animation: pulse-glow 1s infinite alternate;
+}
+
+@keyframes pulse-glow {
+  from {
+    box-shadow: 0 0 8px 2px #86dabd;
+  }
+  to {
+    box-shadow: 0 0 16px 6px #86dabd;
+  }
+}

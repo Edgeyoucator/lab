@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Escape Room - Group Session</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
+
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyC5zfbTz6xiKyj2CDt9vuSROFDjc6JcF8o",
+      authDomain: "catalyst-escape-room.firebaseapp.com",
+      databaseURL: "https://catalyst-escape-room-default-rtdb.europe-west1.firebasedatabase.app",
+      projectId: "catalyst-escape-room",
+      storageBucket: "catalyst-escape-room.firebasestorage.app",
+      messagingSenderId: "993200399723",
+      appId: "1:993200399723:web:4af2e2fec621492be3d82e",
+      measurementId: "G-C7LRXX16NQ"
+    };
+    firebase.initializeApp(firebaseConfig);
+  </script>
+
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>🧪 Team 1</h1>
+
+    <div class="circle-layout">
+      <div class="question" data-key="0">
+        <img src="/images/drone.png" alt="drone" />
+        <label>What machines did the scientists use?
+          <input type="text" data-key="0" placeholder="Type your answer..." disabled /></label>
+        <button class="activate-btn" data-key="0">Answer this question</button>
+      </div>
+
+      <div class="question" data-key="1">
+        <img src="/images/chemical.png" alt="chemical" />
+        <label>What is the codename of this chemical?
+          <input type="text" data-key="1" placeholder="Type your answer..." disabled /></label>
+        <button class="activate-btn" data-key="1">Answer this question</button>
+      </div>
+
+      <div class="question" data-key="2">
+        <img src="/images/ai.png" alt="AI" />
+        <label>What is the AI called that discovered the compound?
+          <input type="text" data-key="2" placeholder="Type your answer..." disabled /></label>
+        <button class="activate-btn" data-key="2">Answer this question</button>
+      </div>
+
+      <div class="question" data-key="3">
+        <img src="/images/sheep.png" alt="sheep" />
+        <label>What happened to the sheep? They _ _ _ _ .
+          <input type="text" data-key="3" placeholder="Type your answer..." disabled /></label>
+        <button class="activate-btn" data-key="3">Answer this question</button>
+      </div>
+
+      <div class="question" data-key="4">
+        <img src="/images/news.png" alt="newspaper" />
+        <label>Why is the chemical dangerous? It's made from <br> _ _ _ _ _ ingredients. 
+          <input type="text" data-key="4" placeholder="Type your answer..." disabled /></label>
+        <button class="activate-btn" data-key="4">Answer this question</button>
+      </div>
+
+      <div class="question" data-key="5">
+        <img src="/images/voice.png" alt="voice" />
+        <label>What is the name of the man in the Russian voice memo?
+          <input type="text" data-key="5" placeholder="Type your answer..." disabled /></label>
+        <button class="activate-btn" data-key="5">Answer this question</button>
+      </div>
+
+      <div id="finalPassword" class="centered-password">
+        <p>🔐 Final password:</p>
+        <input type="text" id="passwordField" placeholder="6-letter password" readonly />
+      </div>
+    </div>
+  </div>
+</body>
+</html>
