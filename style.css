@@ -8,8 +8,9 @@
 }
 
 html {
-  height: 100%;
-  overflow: hidden;
+  height: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 body {
@@ -18,14 +19,12 @@ body {
   font-family: 'Times New Roman', serif;
   color: white;
   text-align: center;
-  position: relative;
-  min-height: 100vh;
-  overflow-y: auto;
-  overflow-x: hidden;
   background-image: url('images/background.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  position: relative;
+  min-height: 100vh;
 }
 
 body::before {
