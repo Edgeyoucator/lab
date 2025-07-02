@@ -20,6 +20,8 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   overflow: hidden;
+  body {
+  overflow-y: auto;
 }
 
 body::before {
