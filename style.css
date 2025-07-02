@@ -7,21 +7,21 @@
   font-display: swap;
 }
 
-html {
-  height: 100%;
-  overflow: hidden;
-}
-
-body {
+html, body {
   margin: 0;
-  padding: 2rem;
+  padding: 0;
   font-family: 'Times New Roman', serif;
   color: white;
   text-align: center;
-  position: relative;
+  height: 100%;
   min-height: 100vh;
-  overflow-y: auto;
   overflow-x: hidden;
+  overflow-y: auto;
+}
+
+body {
+  padding: 2rem;
+  position: relative;
   background-image: url('images/background.jpg');
   background-size: cover;
   background-position: center;
@@ -46,7 +46,7 @@ html::before {
   max-width: 900px;
   margin: 0 auto;
   text-align: center;
-  padding-bottom: 100px; /* ensures bottom spacing */
+  padding-bottom: 100px;
 }
 
 h1 {
@@ -73,7 +73,7 @@ h1 {
   position: absolute;
   width: 200px;
   padding: 1rem;
-  background-color: rgba(31, 46, 71, 0.9);
+  background-color: rgba(31, 46, 71, 0.65);
   border: 1px dashed #86dabd;
   border-radius: 1rem;
   display: flex;
