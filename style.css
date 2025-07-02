@@ -7,23 +7,23 @@
   font-display: swap;
 }
 
-body {
+html, body {
   margin: 0;
   padding: 2rem;
   font-family: 'Times New Roman', serif;
   color: white;
   text-align: center;
   position: relative;
-  min-height: 100vh;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
   background-image: url('images/background.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  overflow-x: hidden;
-  overflow-y: auto;
 }
 
-body::before {
+html::before {
   content: "";
   position: fixed;
   top: 0;
@@ -41,6 +41,7 @@ body::before {
   max-width: 900px;
   margin: 0 auto;
   text-align: center;
+  padding-bottom: 100px; /* ensures bottom spacing */
 }
 
 h1 {
@@ -52,7 +53,7 @@ h1 {
 .circle-layout {
   position: relative;
   width: 700px;
-  height: 700px;
+  min-height: 700px;
   margin: 0 auto;
 }
 
@@ -68,7 +69,7 @@ h1 {
   width: 200px;
   padding: 1rem;
   background-color: rgba(31, 46, 71, 0.65);
-   border: 1px dashed #86dabd;
+  border: 1px dashed #86dabd;
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
@@ -93,10 +94,14 @@ h1 {
 
 .centered-password {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 47%;
+  left: 53.9%;
   transform: translate(-50%, -50%);
   text-align: center;
+  background-color: rgba(255, 120, 10, 0.5);
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
 }
 
 .centered-password input {
@@ -123,29 +128,6 @@ h1 {
 .activate-btn[disabled] {
   background-color: #666;
   cursor: not-allowed;
-}
-
-.centered-password {
-  position: absolute;
-  top: 47%;
-  left: 53.9%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  background-color: rgba(255, 120, 10, 0.5);
-  padding: 1rem 2rem;
-  border-radius: 1rem;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
-}
-
-.centered-password input {
-  font-size: 1.5rem;
-  text-align: center;
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-  border: none;
-  width: 200px;
-  background-color: white;
-  color: #162237;
 }
 
 .password-correct {
